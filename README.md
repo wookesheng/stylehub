@@ -1,3 +1,3 @@
-# stylehub
+# stylehub - web design
 
-xxx
+https://wookesheng.github.io/stylehub/
