@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - StyleHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>StyleHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html" class="active"><i class="fa fa-shopping-cart"></i><span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="educational-disclaimer">
+            <p><strong>Educational Notice:</strong> This website is for educational purposes only. No actual products are sold and no orders will be processed.</p>
+        </div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Your Shopping Cart</h1>
+        </div>
+    </section>
+
+    <section class="cart-section">
+        <div class="container">
+            <div id="cart-empty" class="hidden">
+                <div class="empty-cart-message">
+                    <img src="https://images.unsplash.com/photo-1581318694548-0fb6e47fe59b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Empty Cart">
+                    <h2>Your cart is empty</h2>
+                    <p>Looks like you haven't added any items to your cart yet.</p>
+                    <a href="products.html" class="btn btn-secondary">Continue Shopping</a>
+                </div>
+            </div>
+
+            <div id="cart-content">
+                <div class="cart-items">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items-container">
+                            <!-- Cart items will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cart-actions">
+                    <div class="cart-coupon">
+                        <input type="text" placeholder="Coupon Code">
+                        <button class="btn">Apply Coupon</button>
+                    </div>
+                    <div class="cart-update">
+                        <button id="clear-cart" class="btn btn-secondary">Clear Cart</button>
+                        <button id="update-cart" class="btn">Update Cart</button>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <h2>Cart Summary</h2>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">RM0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span id="cart-shipping">RM5.00</span>
+                    </div>
+                    <div class="summary-item discount hidden" id="discount-row">
+                        <span>Discount</span>
+                        <span id="cart-discount">-RM0.00</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span id="cart-total">RM0.00</span>
+                    </div>
+                    <button id="proceed-to-checkout" class="btn btn-secondary">Proceed to Checkout</button>
+                    <a href="products.html" class="continue-shopping">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Checkout</h2>
+            <div class="checkout-form">
+                <div class="form-section">
+                    <h3>Shipping Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name*</label>
+                            <input type="text" id="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name*</label>
+                            <input type="text" id="last-name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Street Address*</label>
+                        <input type="text" id="address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City*</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State/Province*</label>
+                            <input type="text" id="state" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zip">Zip/Postal Code*</label>
+                            <input type="text" id="zip" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country*</label>
+                            <select id="country" required>
+                                <option value="">Select a country</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="AU">Australia</option>
+                                <option value="MY">Malaysia</option>
+                                <!-- Add more countries as needed -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" id="credit-card" name="payment-method" checked>
+                            <label for="credit-card">Credit Card</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="paypal" name="payment-method">
+                            <label for="paypal">PayPal</label>
+                        </div>
+                    </div>
+
+                    <div id="credit-card-form">
+                        <div class="form-group">
+                            <label for="card-number">Card Number*</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry-date">Expiry Date*</label>
+                                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV*</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-name">Name on Card*</label>
+                            <input type="text" id="card-name" required>
+                        </div>
+                    </div>
+
+                    <div id="paypal-form" class="hidden">
+                        <p>You will be redirected to PayPal to complete your payment.</p>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">RM0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span id="checkout-shipping">RM5.00</span>
+                    </div>
+                    <div class="summary-item discount hidden" id="checkout-discount-row">
+                        <span>Discount</span>
+                        <span id="checkout-discount">-RM0.00</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span id="checkout-total">RM0.00</span>
+                    </div>
+                </div>
+
+                <div class="checkout-actions">
+                    <button id="place-order" class="btn btn-secondary">Place Order</button>
+                    <button class="btn btn-secondary close-modal-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="order-confirmation" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="confirmation-message">
+                <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Order Success">
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for your purchase. Your order number is <span id="order-number">#12345</span>.</p>
+                <p>A confirmation email has been sent to <span id="order-email">customer@example.com</span>.</p>
+                <button class="btn btn-primary" id="continue-shopping-btn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StyleHub</h3>
+                    <p>Your one-stop shop for trendy clothes and pants.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: kesheng@ypccollege.edu.my</p>
+                    <p>Phone: +60123456789</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 StyleHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart-handler.js"></script>
+    <script src="js/checkout.js"></script>
+    <script>
+        // Custom handler to check if cart is empty before checkout
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize cart display
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            console.log('Cart content on page load:', cart);
+            
+            // Check proceed to checkout button
+            const checkoutBtn = document.getElementById('proceed-to-checkout');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', function(e) {
+                    // This is an additional check in case the cart-handler.js event doesn't fire
+                    if (cart.length === 0) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Preventing checkout with empty cart');
+                        
+                        if (typeof showNotification === 'function') {
+                            showNotification('Your cart is empty! Please add items before checking out.', 'error');
+                        } else {
+                            alert('Your cart is empty! Please add items before checking out.');
+                        }
+                        return false;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

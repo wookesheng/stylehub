@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Trendy Clothes & Pants</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>StyleHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html"><i class="fa fa-shopping-cart"></i><span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="educational-disclaimer">
+            <p><strong>Educational Notice:</strong> This website is for educational purposes only. No actual products are sold and no orders will be processed.</p>
+        </div>
+    </div>
+
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Summer Collection 2025</h2>
+                <p>Discover the latest trends in fashion</p>
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="1" data-name="Casual T-Shirt" data-price="29.99" data-category="tshirt">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Casual T-Shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Casual T-Shirt</h3>
+                        <p class="price">RM29.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="2" data-name="Slim Fit Jeans" data-price="49.99" data-category="pants">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Slim Fit Jeans">
+                    </div>
+                    <div class="product-info">
+                        <h3>Slim Fit Jeans</h3>
+                        <p class="price">RM49.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="3" data-name="Summer Dress" data-price="39.99" data-category="dress">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Summer Dress">
+                    </div>
+                    <div class="product-info">
+                        <h3>Summer Dress</h3>
+                        <p class="price">RM39.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="4" data-name="Cargo Pants" data-price="45.99" data-category="pants">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Cargo Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cargo Pants</h3>
+                        <p class="price">RM45.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="products.html" class="btn">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <a href="products.html?category=tshirts" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="T-Shirts">
+                    <h3>T-Shirts</h3>
+                </a>
+                <a href="products.html?category=pants" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Pants">
+                    <h3>Pants</h3>
+                </a>
+                <a href="products.html?category=dresses" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dresses">
+                    <h3>Dresses</h3>
+                </a>
+                <a href="products.html?category=accessories" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Accessories">
+                    <h3>Accessories</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StyleHub</h3>
+                    <p>Your one-stop shop for trendy clothes and pants.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: kesheng@ypccollege.edu.my</p>
+                    <p>Phone: +60123456789</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 StyleHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-quick-view">
+                <div class="product-quick-view-container">
+                    <div class="product-quick-image">
+                        <img id="quick-view-image" src="" alt="Product Image">
+                    </div>
+                    <div class="product-quick-info">
+                        <h2 id="quick-view-name"></h2>
+                        <p class="price" id="quick-view-price"></p>
+                        <p id="quick-view-description"></p>
+                        <div class="product-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Category:</span>
+                                <span id="quick-view-category"></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">SKU:</span>
+                                <span id="quick-view-sku"></span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary quick-add-to-cart">Add to Cart</button>
+                            <a id="quick-view-details" href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Direct cart handler for homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('[FIXED] Homepage cart handler initialized');
+            
+            // Get all Add to Cart buttons
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            
+            addToCartButtons.forEach(button => {
+                // Replace with new button to clear all handlers
+                const newButton = button.cloneNode(true);
+                button.parentNode.replaceChild(newButton, button);
+                
+                // Add our direct handler
+                newButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Get product data
+                    const productCard = this.closest('.product-card');
+                    if (!productCard) return;
+                    
+                    const productId = productCard.dataset.id;
+                    const productName = productCard.dataset.name;
+                    const productPrice = parseFloat(productCard.querySelector('.price').textContent.replace('RM', ''));
+                    const productCategory = productCard.dataset.category;
+                    const productImg = productCard.querySelector('img').src;
+                    
+                    console.log('[FIXED] Adding product:', productName);
+                    
+                    // Get existing cart instead of creating a new empty one
+                    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+                    
+                    // Check if product already exists in cart
+                    const existingItemIndex = existingCart.findIndex(item => item.id === productId);
+                    
+                    if (existingItemIndex > -1) {
+                        // If item already exists, increment quantity
+                        existingCart[existingItemIndex].quantity += 1;
+                        console.log('[FIXED] Increased quantity for existing item:', productName);
+                    } else {
+                        // Add new item to existing cart
+                        existingCart.push({
+                            id: productId,
+                            name: productName,
+                            price: productPrice,
+                            category: productCategory,
+                            img: productImg,
+                            quantity: 1
+                        });
+                        console.log('[FIXED] Added new item to cart:', productName);
+                    }
+                    
+                    // Save updated cart to localStorage
+                    localStorage.setItem('cart', JSON.stringify(existingCart));
+                    
+                    // Update cart count - calculate total items
+                    const cartCountElement = document.getElementById('cart-count');
+                    if (cartCountElement) {
+                        const totalItems = existingCart.reduce((total, item) => total + item.quantity, 0);
+                        cartCountElement.textContent = totalItems;
+                    }
+                    
+                    // Show feedback
+                    this.textContent = 'Added!';
+                    this.disabled = true;
+                    this.style.backgroundColor = '#4CAF50';
+                    
+                    // Show notification
+                    if (typeof showNotification === 'function') {
+                        showNotification('Product added to cart successfully!');
+                    } else {
+                        alert('Product added to cart successfully!');
+                    }
+                    
+                    setTimeout(() => {
+                        this.textContent = 'Add to Cart';
+                        this.disabled = false;
+                        this.style.backgroundColor = '';
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

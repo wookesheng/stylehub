@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - StyleHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>StyleHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html"><i class="fa fa-shopping-cart"></i><span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="educational-disclaimer">
+            <p><strong>Educational Notice:</strong> This website is for educational purposes only. No actual products are sold and no orders will be processed.</p>
+        </div>
+    </div>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li id="product-name">Product Name</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-container">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Product Image">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 id="detail-product-name">Casual T-Shirt</h1>
+                    <div class="product-rating">
+                        <span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
+                        <span class="reviews">(24 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price" id="detail-product-price">RM29.99</span>
+                    </div>
+                    <div class="product-description">
+                        <p id="detail-product-description">A comfortable and stylish t-shirt perfect for everyday wear. Made from 100% cotton, this t-shirt features a classic fit and is available in multiple colors.</p>
+                    </div>
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Category:</span>
+                            <span class="meta-value" id="detail-product-category">T-Shirts</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">SKU:</span>
+                            <span class="meta-value" id="detail-product-sku">TS-001</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Tags:</span>
+                            <span class="meta-value" id="detail-product-tags">Casual, Cotton, T-Shirt</span>
+                        </div>
+                    </div>
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Size:</label>
+                            <div class="size-options">
+                                <button class="size-option active">S</button>
+                                <button class="size-option">M</button>
+                                <button class="size-option">L</button>
+                                <button class="size-option">XL</button>
+                            </div>
+                        </div>
+                        <div class="option-group">
+                            <label>Color:</label>
+                            <div class="color-options">
+                                <button class="color-option active" style="background-color: #000000;"></button>
+                                <button class="color-option" style="background-color: #ff0000;"></button>
+                                <button class="color-option" style="background-color: #ffffff; border: 1px solid #ddd;"></button>
+                            </div>
+                        </div>
+                        <div class="quantity-selector">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button id="decrease-quantity">-</button>
+                                <input type="number" id="product-quantity" value="1" min="1">
+                                <button id="increase-quantity">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button id="add-to-cart-detail" class="btn btn-secondary">Add to Cart</button>
+                        <button class="btn btn-secondary"><i class="fa fa-heart"></i> Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="specifications">Specifications</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+            <div class="tab-content">
+                <div id="description" class="tab-pane active">
+                    <h2>Product Description</h2>
+                    <p>This casual t-shirt is designed for maximum comfort and style. Made from premium quality 100% cotton, it offers breathability and softness that lasts all day long. The classic design features a regular fit with short sleeves and a round neckline that makes it versatile for various occasions.</p>
+                    <p>Whether you're heading out for a casual day with friends or need a comfortable option for lounging at home, this t-shirt is the perfect choice. It pairs well with jeans, shorts, or even layered under a jacket for a more polished look.</p>
+                    <p>Available in multiple colors and sizes, you can find the perfect match for your personal style. Each t-shirt is carefully crafted with attention to detail, ensuring high-quality stitching and durability that will keep it looking great wash after wash.</p>
+                </div>
+                <div id="specifications" class="tab-pane">
+                    <h2>Product Specifications</h2>
+                    <table class="specs-table">
+                        <tr>
+                            <th>Material</th>
+                            <td>100% Cotton</td>
+                        </tr>
+                        <tr>
+                            <th>Fit</th>
+                            <td>Regular</td>
+                        </tr>
+                        <tr>
+                            <th>Neck Style</th>
+                            <td>Round</td>
+                        </tr>
+                        <tr>
+                            <th>Sleeve Length</th>
+                            <td>Short</td>
+                        </tr>
+                        <tr>
+                            <th>Care Instructions</th>
+                            <td>Machine wash cold, tumble dry low</td>
+                        </tr>
+                        <tr>
+                            <th>Country of Origin</th>
+                            <td>Imported</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="reviews" class="tab-pane">
+                    <h2>Customer Reviews</h2>
+                    <div class="review-summary">
+                        <div class="average-rating">
+                            <h3>4.5</h3>
+                            <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
+                            <p>Based on 24 reviews</p>
+                        </div>
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span>5 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 70%;"></div>
+                                </div>
+                                <span>18</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 20%;"></div>
+                                </div>
+                                <span>5</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 5%;"></div>
+                                </div>
+                                <span>1</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 0%;"></div>
+                                </div>
+                                <span>0</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 0%;"></div>
+                                </div>
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer-reviews">
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer">
+                                    <h4>John D.</h4>
+                                    <span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                                </div>
+                                <span class="review-date">2 weeks ago</span>
+                            </div>
+                            <p class="review-text">Great quality t-shirt! The fabric is comfortable and the fit is perfect. I've washed it several times and it still looks new. Definitely will buy more colors.</p>
+                        </div>
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer">
+                                    <h4>Sarah M.</h4>
+                                    <span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                                </div>
+                                <span class="review-date">1 month ago</span>
+                            </div>
+                            <p class="review-text">I love this t-shirt! The material is soft and breathable, perfect for summer. I ordered a medium and it fits exactly as expected.</p>
+                        </div>
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer">
+                                    <h4>Mike T.</h4>
+                                    <span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
+                                </div>
+                                <span class="review-date">2 months ago</span>
+                            </div>
+                            <p class="review-text">Good quality for the price. The shirt fits well but slightly shorter than I expected. Still comfortable and looks nice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-products">
+        <div class="container">
+            <h2>You May Also Like</h2>
+            <div class="product-slider">
+                <div class="product-card" data-id="5" data-name="Graphic T-Shirt" data-price="34.99" data-category="tshirt">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Graphic T-Shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Graphic T-Shirt</h3>
+                        <p class="price">RM34.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="7" data-name="Denim Jacket" data-price="59.99" data-category="tshirt">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551537482-f2075a1d41f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Denim Jacket">
+                    </div>
+                    <div class="product-info">
+                        <h3>Denim Jacket</h3>
+                        <p class="price">RM59.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="2" data-name="Slim Fit Jeans" data-price="49.99" data-category="pants">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Slim Fit Jeans">
+                    </div>
+                    <div class="product-info">
+                        <h3>Slim Fit Jeans</h3>
+                        <p class="price">RM49.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="8" data-name="Chino Pants" data-price="42.99" data-category="pants">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Chino Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chino Pants</h3>
+                        <p class="price">RM42.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StyleHub</h3>
+                    <p>Your one-stop shop for trendy clothes and pants.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: kesheng@ypccollege.edu.my</p>
+                    <p>Phone: +60123456789</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 StyleHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
+    <script>
+        // DIRECT cart handler that bypasses all other scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('[FIXED] Direct cart handler initialized');
+            
+            // Get the Add to Cart button
+            const addToCartBtn = document.getElementById('add-to-cart-detail');
+            if (addToCartBtn) {
+                // Replace with new button to clear all event handlers
+                const newButton = addToCartBtn.cloneNode(true);
+                addToCartBtn.parentNode.replaceChild(newButton, addToCartBtn);
+                
+                // Add our single handler
+                newButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('[FIXED] Add to Cart button clicked');
+                    
+                    // Get product data
+                    const productId = new URLSearchParams(window.location.search).get('id');
+                    const productName = document.getElementById('detail-product-name').textContent;
+                    const productPrice = parseFloat(document.getElementById('detail-product-price').textContent.replace('RM', ''));
+                    const productCategory = document.getElementById('detail-product-category').textContent;
+                    const productImg = document.getElementById('main-product-image').src;
+                    const quantity = parseInt(document.getElementById('product-quantity').value) || 1;
+                    
+                    console.log('[FIXED] Adding product with quantity:', quantity);
+                    
+                    // Get existing cart
+                    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+                    
+                    // Check if product already exists
+                    const existingItemIndex = existingCart.findIndex(item => item.id === productId);
+                    
+                    if (existingItemIndex > -1) {
+                        // Update with selected quantity (don't add to existing)
+                        existingCart[existingItemIndex].quantity = quantity;
+                        console.log('[FIXED] Updated existing item quantity to:', quantity);
+                    } else {
+                        // Add new item
+                        existingCart.push({
+                            id: productId,
+                            name: productName,
+                            price: productPrice,
+                            category: productCategory,
+                            img: productImg,
+                            quantity: quantity
+                        });
+                        console.log('[FIXED] Added new item to cart');
+                    }
+                    
+                    // Save updated cart to localStorage
+                    localStorage.setItem('cart', JSON.stringify(existingCart));
+                    
+                    // Update cart count
+                    const cartCountElement = document.getElementById('cart-count');
+                    if (cartCountElement) {
+                        const totalItems = existingCart.reduce((total, item) => total + item.quantity, 0);
+                        cartCountElement.textContent = totalItems;
+                    }
+                    
+                    // Show feedback
+                    this.textContent = 'Added!';
+                    this.disabled = true;
+                    this.style.backgroundColor = '#4CAF50';
+                    
+                    // Show notification
+                    if (typeof showNotification === 'function') {
+                        showNotification('Product added to cart successfully!');
+                    } else {
+                        alert('Product added to cart successfully!');
+                    }
+                    
+                    setTimeout(() => {
+                        this.textContent = 'Add to Cart';
+                        this.disabled = false;
+                        this.style.backgroundColor = '';
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
